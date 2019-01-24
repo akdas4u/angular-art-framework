@@ -1,0 +1,83 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div id="default-table" class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Default Table</span>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#default-table-view" data-toggle="tab">
+                                            <i class="material-icons">visibility</i> View
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#default-table-html" data-toggle="tab">
+                                            <i class="material-icons">code</i> default-table.html
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#default-table-component" data-toggle="tab">
+                                            <i class="material-icons">format_align_left</i> default-table.component.ts
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#default-table-scss" data-toggle="tab">
+                                            <i class="material-icons">palette</i> default-table.scss
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="default-table-view">
+                                <app-default-table-kit [columns]="tableColumns" [rows]="tableRows" [hasActions]="true"
+                                    [hasEditButton]="true" [hasActiveButton]="true" [hasDeleteButton]="true"
+                                    (editClick)="editTableItem($event)" (activeClick)="activateTableItem($event)"
+                                    (deleteClick)="deleteTableItem($event)">
+                                </app-default-table-kit>
+                            </div>
+                            <div class="tab-pane" id="default-table-html">
+                                <h5>default-table.html</h5>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>HTML</h5>
+                                        <pre>{{ defaultTableHtml }}</pre>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5>Inputs</h5>
+                                        <pre>{{ defaultTableInputs }}</pre>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5>Outputs</h5>
+                                        <pre>{{ defaultTableOutputs }}</pre>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="default-table-component">
+                                <h5>default-table.component.ts</h5>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <pre>{{ defaultTableComponentCode }}</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="default-table-scss">
+                                <h5>default-table.component.scss</h5>
+                                <pre>{{ defaultTableScss }}</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

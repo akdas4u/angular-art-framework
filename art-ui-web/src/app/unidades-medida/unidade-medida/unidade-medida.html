@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <form [formGroup]="formGroup" (ngSubmit)="submit()">
+                        <div class="card-header card-header-rose card-header-icon">
+                            <div class="card-icon">
+                                <i class="material-icons">mail_outline</i>
+                            </div>
+                            <h4 class="card-title">Unidade de Medida</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- <app-input [type]="text" [placeholder]="Descrição *" [formControlName]="descricao" [formControl]="descriptionFormControl"></app-input> -->
+                            <mat-form-field class="example-full-width" [ngClass]="{'has-success': validDescription === true}">
+                                <input type="text" matInput placeholder="Descrição *" formControlName="descricao"
+                                    (ngModelChange)="descriptionValidation($event)">
+                                <mat-error *ngIf="descriptionFormControl.hasError('required')">
+                                    A descrição é <strong>obrigatória</strong>.
+                                </mat-error>
+                                <mat-error *ngIf="descriptionFormControl.hasError('minlength')">
+                                        A descrição deve possuir mais de 3 caracteres.
+                                    </mat-error>
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width" [ngClass]="{'has-success': validAbreviation === true}">
+                                <input type="text" matInput placeholder="Abreviação *" formControlName="abreviacao"
+                                    (ngModelChange)="abreviationValidation($event)">
+                                <mat-error *ngIf="abreviationFormControl.hasError('required')">
+                                    A abreviação é <strong>obrigatória</strong>.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="card-footer text-right">
+                            <button mat-raised-button type="button" class="btn btn-default" (click)="back()">Voltar</button>
+                            <button mat-raised-button type="submit" class="btn btn-rose">{{ isEditMode ? 'Atualizar' :
+                                'Criar' }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

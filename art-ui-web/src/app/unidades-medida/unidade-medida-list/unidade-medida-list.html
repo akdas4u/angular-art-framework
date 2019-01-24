@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-rose card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h4 class="card-title">
+                            Unidades de Medida
+                            <button mat-raised-button class="btn btn-sm btn-info btn-round float-right" (click)="create()">
+                                <i class="material-icons">add_circle</i> Novo
+                            </button>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <app-default-table-kit 
+                            [columns]="tableColumns" 
+                            [rows]="tableData" 
+                            (editClick)="edit($event)"
+                            (activeClick)="activate($event)" 
+                            (deleteClick)="delete($event)">
+                        </app-default-table-kit>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

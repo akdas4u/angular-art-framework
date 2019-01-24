@@ -1,0 +1,38 @@
+{
+  "unidademedida": [
+    {
+      "id": 4,
+      "descricao": "Litro",
+      "abreviacao": "l",
+      "ativo": true
+    },
+    {
+      "id": 5,
+      "descricao": "Quilograma",
+      "abreviacao": "kg",
+      "ativo": true
+    },
+    {
+      "id": 6,
+      "abreviacao": "T",
+      "descricao": "Teste",
+      "ativo": true
+    }
+  ],
+  "usuario": [
+    {
+        "id": 1,
+        "login": "admin",
+        "password": "123456",
+        "isAdmin": true,
+        "ativo": true
+    },
+    {
+        "id": 2,
+        "login": "vsilva",
+        "password": "abcde",
+        "isAdmin": false,
+        "ativo": true
+    }
+  ]
+}
