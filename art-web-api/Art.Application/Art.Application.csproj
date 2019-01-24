@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="8.0.0" />
+        <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+        <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Art.Domain\Art.Domain.csproj" />
+        <ProjectReference Include="..\Art.Infra.CrossCutting.Core\Art.Infra.CrossCutting.Core.csproj" />
+        <ProjectReference Include="..\Art.Infra.Data\Art.Infra.Data.csproj" />
+    </ItemGroup>
+
+</Project>
